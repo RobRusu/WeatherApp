@@ -7,9 +7,28 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <label for="location">Enter your location: </label>
-    <input type="text" id="location" name="location" />
-    <button class="searchLocation">Search</button>
-    <div class="todayForecast"></div>
+    <div class="main">
+      <div class="search">
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter your location"
+        />
+        <img class="searchLocation" />
+        <span class="errorMessage"></span>
+      </div>
+      <div class="todayForecast">
+        <div class="mainForecast">
+          <div class="placeAndTime"></div>
+          <div class="temperature"></div>
+        </div>
+        <div class="miscForecast"></div>
+      </div>
+    </div>
+    <div class="days">
+      <div class="dayOne">Day 1</div>
+      <div class="dayTwo">Day 2</div>
+    </div>
   </body>
 </html>
