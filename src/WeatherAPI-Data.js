@@ -1,8 +1,9 @@
 import { Weather } from "./weatherClass";
+import { format } from "date-fns";
 
 export async function getData(location) {
   const result = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=57c86726b8484f64b8f102529240505&q=${location}&days=3`,
+    `https://api.weatherapi.com/v1/forecast.json?key=46ec1928d8cc4dcf977230638242105&q=${location}&days=3`,
     { mode: "cors" }
   );
 
@@ -11,7 +12,6 @@ export async function getData(location) {
     data.location.country,
     data.location.localtime,
     data.location.name,
-    data.location.region,
     data.current.feelslike_c,
     data.current.feelslike_f,
     data.current.gust_kph,
@@ -19,12 +19,28 @@ export async function getData(location) {
     data.current.humidity,
     data.current.temp_c,
     data.current.temp_f,
-    data.current.condition.text
+    data.current.is_day,
+    data.current.condition.text,
+    data.forecast.forecastday[0].day.mintemp_c,
+    data.forecast.forecastday[0].day.maxtemp_c,
+    data.forecast.forecastday[0].day.mintemp_f,
+    data.forecast.forecastday[0].day.maxtemp_f,
+    data.forecast.forecastday[1].day.mintemp_c,
+    data.forecast.forecastday[1].day.maxtemp_c,
+    data.forecast.forecastday[1].day.mintemp_f,
+    data.forecast.forecastday[1].day.maxtemp_f,
+    data.forecast.forecastday[2].day.mintemp_c,
+    data.forecast.forecastday[2].day.maxtemp_c,
+    data.forecast.forecastday[2].day.mintemp_f,
+    data.forecast.forecastday[2].day.maxtemp_f,
+    data.forecast.forecastday[0].day.daily_chance_of_rain
   );
 
   const dateAndTime = weather.splitDate(data.location.localtime);
   weather.date = dateAndTime[0];
   weather.time = dateAndTime[1];
-
+  weather.date = format(new Date(weather.date), "dd/MM/yy");
+  console.log(data);
+  console.log(weather);
   return weather;
 }

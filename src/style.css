@@ -3,3 +3,120 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main {
+  background-color: rgb(15, 3, 43);
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+  border: 3px solid white;
+  border-radius: min(3vw, 3vh);
+  padding: 0.5vh 0.5vw;
+}
+
+#location {
+  padding: 0.3vh 0.3vw;
+  height: 3vh;
+  width: 25vw;
+  font-size: min(2vh, 2vw);
+  background-color: rgb(15, 3, 43);
+  border: none;
+  color: white;
+  &:focus {
+    outline: none;
+  }
+}
+
+.searchLocation {
+  padding: 0.3vh 0.3vw;
+  height: 3vh;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mainForecast {
+  display: flex;
+  gap: 5vw;
+  justify-content: center;
+}
+
+.miscForecast {
+  display: flex;
+  gap: 2.5vw;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 2.5vh;
+  font-size: min(1.1vh, 1.1vw);
+}
+
+.tempForecast {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: 3vw;
+}
+
+.placeAndTime {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vh;
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  font-size: min(1.5vw, 1.5vh);
+}
+
+.temperature > img {
+  width: 6vh;
+  height: 6vh;
+  margin-right: 1vw;
+}
+
+.minMax {
+  display: flex;
+  gap: 1vw;
+  font-size: min(1.5vw, 1.5vh);
+  align-items: center;
+}
+
+.minMax > img {
+  width: 4vh;
+  height: 4vh;
+}
+
+.miscForecast > div > img {
+  width: 3vh;
+  height: 3vh;
+}
+
+.city {
+  font-size: min(4vh, 4vw);
+}
+
+.place {
+  font-size: min(1.25vh, 1.25vw);
+}
+
+.miscForecast > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+}
