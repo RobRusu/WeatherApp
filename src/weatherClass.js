@@ -2,6 +2,8 @@ export class Weather {
   constructor(
     country,
     date,
+    tomorrowDate,
+    dayAfterDate,
     city,
     feelsC,
     feelsF,
@@ -12,6 +14,8 @@ export class Weather {
     tempF,
     isDay,
     forecast,
+    tomorrowForecast,
+    dayAfterForecast,
     todaysMinC,
     todaysMaxC,
     todaysMinF,
@@ -28,6 +32,8 @@ export class Weather {
   ) {
     this.country = country;
     this.date = date;
+    this.tomorrowDate = tomorrowDate;
+    this.dayAfterDate = dayAfterDate;
     this.city = city;
     this.feelsC = feelsC;
     this.feelsF = feelsF;
@@ -38,6 +44,8 @@ export class Weather {
     this.tempF = tempF;
     this.isDay = isDay;
     this.forecast = forecast;
+    this.tomorrowForecast = tomorrowForecast;
+    this.dayAfterForecast = dayAfterForecast;
     this.todaysMinC = todaysMinC;
     this.todaysMaxC = todaysMaxC;
     this.todaysMinF = todaysMinF;

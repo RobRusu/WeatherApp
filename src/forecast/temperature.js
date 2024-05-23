@@ -16,7 +16,7 @@ export function displayTemperature(obj) {
   const minMaxPic = new Image();
 
   forecastPic.alt = "Placeholder";
-  forecastPic.src = determinePicture(obj);
+  forecastPic.src = determinePicture(obj.isDay, obj.forecast);
   temp.textContent = `${obj.tempC} °C / ${obj.tempF} °F`;
   forecast.textContent = obj.forecast;
   minMaxFinal.classList.add("minMax");
