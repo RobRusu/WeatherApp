@@ -45,8 +45,27 @@ export async function getData(location) {
   weather.date = dateAndTime[0];
   weather.time = dateAndTime[1];
   weather.date = format(new Date(weather.date), "dd/MM/yy");
-  // weather.tomorrowDate = determineDay(weather.tomorrowDate);
-  // weather.dayAfterDate = determineDay(weather.dayAfterDate);
+  weather.date = `${weather.date} - ${determineDay(data.location.localtime)}`;
+
+  weather.tempC = Math.round(weather.tempC);
+  weather.tempF = Math.round(weather.tempF);
+  weather.todaysMaxC = Math.round(weather.todaysMaxC);
+  weather.todaysMaxF = Math.round(weather.todaysMaxF);
+  weather.todaysMinC = Math.round(weather.todaysMinC);
+  weather.todaysMinF = Math.round(weather.todaysMinF);
+  weather.feelsC = Math.round(weather.feelsC);
+  weather.feelsF = Math.round(weather.feelsF);
+  weather.windKPH = Math.round(weather.windKPH);
+  weather.windMPH = Math.round(weather.windMPH);
+  weather.dayAfterMaxC = Math.round(weather.dayAfterMaxC);
+  weather.dayAfterMaxF = Math.round(weather.dayAfterMaxF);
+  weather.dayAfterMinC = Math.round(weather.dayAfterMinC);
+  weather.dayAfterMinF = Math.round(weather.dayAfterMinF);
+  weather.tomorrowMaxC = Math.round(weather.tomorrowMaxC);
+  weather.tomorrowMaxF = Math.round(weather.tomorrowMaxF);
+  weather.tomorrowMinC = Math.round(weather.tomorrowMinC);
+  weather.tomorrowMinF = Math.round(weather.tomorrowMinF);
+
   console.log(data);
   console.log(weather);
   return weather;

@@ -5,40 +5,88 @@
 }
 
 :root {
-  background-color: rgb(15, 3, 43);
+  display: flex;
+  justify-content: center;
+  font-family: "CoolFont";
+  --header: min(1.2vh, 1.2vw);
+  --city: min(3.5vh, 3.5vw);
+  --regularSize: min(1.5vh, 1.5vw);
+  --pictureSize: min(4.5vh, 4.5vw);
+  --fontMisc: min(1vh, 1vw);
+  --pictureMisc: min(2.5vh, 2.5vw);
+  --error: min(1.2vh, 1.2vw);
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url("./PoetsenOne-Regular.ttf");
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  height: 5vh;
+  width: 40vw;
+  background-color: #2291b68a;
+  border-radius: 15px;
+  padding: 0 2vw;
+  color: white;
+  font-weight: bold;
+  margin-top: 2vh;
+  font-size: var(--header);
+}
+
+.references {
+  display: flex;
+  gap: 2vw;
+}
+
+a {
+  color: white;
 }
 
 .main {
-  height: 45vh;
+  height: 35vh;
+  width: 40vw;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
   color: white;
-  background-color: rgb(28, 6, 80);
+  font-weight: bold;
+  background-color: #2291b68a;
+  border-radius: 30px;
+  padding: 0 2vw;
 }
 
 .search {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10vh;
   border: 3px solid white;
   border-radius: min(3vw, 3vh);
   padding: 0.5vh 0.5vw;
 }
 
 #location {
-  padding: 0.3vh 0.3vw;
+  padding: 0.5vh 0.5vw;
   height: 3vh;
   width: 25vw;
   font-size: min(2vh, 2vw);
-  background-color: rgb(28, 6, 80);
+  background-color: #2291b600;
   border: none;
+  font-family: "CoolFont";
   color: white;
   &:focus {
     outline: none;
   }
+}
+
+#location::placeholder {
+  color: rgba(255, 255, 255, 0.445);
 }
 
 .searchLocation {
@@ -51,7 +99,7 @@
 
 .mainForecast {
   display: flex;
-  gap: 5vw;
+  gap: 1.5vw;
   justify-content: center;
 }
 
@@ -61,14 +109,14 @@
   justify-content: center;
   margin-top: 5vh;
   margin-bottom: 2.5vh;
-  font-size: min(1.1vh, 1.1vw);
+  font-size: var(--fontMisc);
 }
 
 .tempForecast {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-right: 3vw;
+  margin-right: 1.5vw;
 }
 
 .placeAndTime {
@@ -80,38 +128,37 @@
 .temperature {
   display: flex;
   align-items: center;
-  font-size: min(1.5vw, 1.5vh);
+  font-size: var(--regularSize);
 }
 
 .temperature > img {
-  width: 6vh;
-  height: 6vh;
-  margin-right: 1vw;
+  width: var(--pictureSize);
+  height: var(--pictureSize);
+  margin-right: 0.5vw;
 }
 
 .minMax {
   display: flex;
-  gap: 1vw;
-  font-size: min(1.5vw, 1.5vh);
+  gap: 0.5vw;
   align-items: center;
 }
 
 .minMax > img {
-  width: 4vh;
-  height: 4vh;
+  width: var(--pictureSize);
+  height: var(--pictureSize);
 }
 
 .miscForecast > div > img {
-  width: 3vh;
-  height: 3vh;
+  width: var(--pictureMisc);
+  height: var(--pictureMisc);
 }
 
 .city {
-  font-size: min(4vh, 4vw);
+  font-size: var(--city);
 }
 
 .place {
-  font-size: min(1.25vh, 1.25vw);
+  font-size: var(--regularSize);
 }
 
 .miscForecast > div {
@@ -123,19 +170,24 @@
 .days {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
+  font-weight: bold;
   margin-top: 5vh;
   gap: 5vw;
-  font-size: min(1.5vh, 1.5vw);
+  font-size: var(--regularSize);
+  height: 20vh;
+  width: 40vw;
+  background-color: #2291b68a;
+  border-radius: 30px;
 }
 
 .days > div > div > img {
-  width: 4vh;
-  height: 4vh;
+  width: var(--pictureSize);
+  height: var(--pictureSize);
 }
 
 .weekDay {
-  font-size: min(2.2vh, 2.2vw);
   margin-bottom: 1vh;
 }
 
@@ -152,4 +204,10 @@
   display: flex;
   align-items: center;
   gap: 1vw;
+}
+
+.errorMessage {
+  height: 2vh;
+  margin-bottom: 3vh;
+  font-size: var(--error);
 }

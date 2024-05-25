@@ -2,10 +2,12 @@ Sunny
 Cloudy
 Raining
 Snowing
+
 Night clear sky - stars/moon
 Night Raining
 Night Snowing
 Night Cloudy
+
 If none of the above and is day - Sunny
 If none of the above and is night - Clear sky with stars
 
