@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   determineBackground: () => (/* binding */ determineBackground)\n/* harmony export */ });\n/* harmony import */ var _img_sunnyWeather_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/sunnyWeather.jpg */ \"./src/img/sunnyWeather.jpg\");\n/* harmony import */ var _img_rainyWeather_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/rainyWeather.jpg */ \"./src/img/rainyWeather.jpg\");\n/* harmony import */ var _img_cloudyNight_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/cloudyNight.jpg */ \"./src/img/cloudyNight.jpg\");\n/* harmony import */ var _img_cloudyWeather_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/cloudyWeather.jpg */ \"./src/img/cloudyWeather.jpg\");\n/* harmony import */ var _img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/mistyWeather.jpg */ \"./src/img/mistyWeather.jpg\");\n/* harmony import */ var _img_nightSky_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/nightSky.jpg */ \"./src/img/nightSky.jpg\");\n/* harmony import */ var _img_snowyNight_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/snowyNight.jpg */ \"./src/img/snowyNight.jpg\");\n/* harmony import */ var _img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/thunderWeather.jpg */ \"./src/img/thunderWeather.jpg\");\n/* harmony import */ var _img_rainyNight_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/rainyNight.jpg */ \"./src/img/rainyNight.jpg\");\n/* harmony import */ var _img_snowyWeather_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../img/snowyWeather.jpg */ \"./src/img/snowyWeather.jpg\");\n\n\n\n\n\n\n\n\n\n\nfunction determineBackground(forecastDay, forecastText) {\n  forecastText = forecastText.toLowerCase();\n  forecastText = forecastText.trim();\n  if (forecastDay == 1) {\n    if (forecastText === \"sunny\") {\n      return `url(${_img_sunnyWeather_jpg__WEBPACK_IMPORTED_MODULE_0__})`;\n    } else if (forecastText == \"partly cloudy\") {\n      return `url(${_img_cloudyWeather_jpg__WEBPACK_IMPORTED_MODULE_3__})`;\n    } else if (forecastText === \"cloudy\" || forecastText === \"overcast\") {\n      return `url(${_img_cloudyWeather_jpg__WEBPACK_IMPORTED_MODULE_3__})`;\n    } else if (forecastText === \"mist\") {\n      return `url(${_img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;\n    } else if (forecastText === \"patchy rain possible\" || forecastText === \"patchy freezing drizzle possible\" || forecastText === \"patchy light drizzle\" || forecastText === \"light drizzle\" || forecastText === \"freezing drizzle\" || forecastText === \"heavy freezing drizzle\" || forecastText === \"patchy light rain\" || forecastText === \"light rain\" || forecastText === \"moderate rain at times\" || forecastText === \"moderate rain\" || forecastText === \"heavy rain at times\" || forecastText === \"heavy rain\" || forecastText === \"light freezing rain\" || forecastText === \"moderate or heavy freezing rain\" || forecastText === \"ice pellets\" || forecastText === \"light rain shower\" || forecastText === \"moderate or heavy rain shower\" || forecastText === \"torrential rain shower\" || forecastText === \"light showers of ice pellets\" || forecastText === \"moderate or heavy showers of ice pellets\" || forecastText === \"patchy rain nearby\") {\n      return `url(${_img_rainyWeather_jpg__WEBPACK_IMPORTED_MODULE_1__})`;\n    } else if (forecastText === \"patchy snow possible\" || forecastText === \"blowing snow\" || forecastText === \"blizzard\" || forecastText === \"patchy light snow\" || forecastText === \"light snow\" || forecastText === \"patchy moderate snow\" || forecastText === \"moderate snow\" || forecastText === \"patchy heavy snow\" || forecastText === \"heavy snow\" || forecastText === \"light snow showers\" || forecastText === \"moderate or heavy snow showers\") {\n      return `url(${_img_snowyWeather_jpg__WEBPACK_IMPORTED_MODULE_9__})`;\n    } else if (forecastText === \"patchy sleet possible\" || forecastText === \"light sleet\" || forecastText === \"moderate or heavy sleet\" || forecastText === \"light sleet showers\" || forecastText === \"moderate or heavy sleet showers\") {\n      return `url(${_img_rainyWeather_jpg__WEBPACK_IMPORTED_MODULE_1__})`;\n    } else if (forecastText === \"thundery outbreaks possible\") {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    } else if (forecastText === \"fog\" || forecastText === \"freezing fog\") {\n      return `url(${_img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;\n    } else if (forecastText === \"patchy light rain with thunder\" || forecastText === \"moderate or heavy rain with thunder\") {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    } else if (forecastText === \"patchy light snow with thunder\" || forecastText === \"moderate or heavy snow with thunder\") {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    }\n  } else {\n    if (forecastText === \"clear\") {\n      return `url(${_img_nightSky_jpg__WEBPACK_IMPORTED_MODULE_5__})`;\n    } else if (forecastText === \"partly cloudy\") {\n      return `url(${_img_cloudyNight_jpg__WEBPACK_IMPORTED_MODULE_2__})`;\n    } else if (forecastText === \"cloudy\" || forecastText === \"overcast\") {\n      return `url(${_img_cloudyNight_jpg__WEBPACK_IMPORTED_MODULE_2__})`;\n    } else if (forecastText === \"mist\") {\n      return `url(${_img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;\n    } else if (forecastText === \"patchy rain possible\" || forecastText === \"patchy freezing drizzle possible\" || forecastText === \"patchy light drizzle\" || forecastText === \"light drizzle\" || forecastText === \"freezing drizzle\" || forecastText === \"heavy freezing drizzle\" || forecastText === \"patchy light rain\" || forecastText === \"light rain\" || forecastText === \"moderate rain at times\" || forecastText === \"moderate rain\" || forecastText === \"heavy rain at times\" || forecastText === \"heavy rain\" || forecastText === \"light freezing rain\" || forecastText === \"moderate or heavy freezing rain\" || forecastText === \"ice pellets\" || forecastText === \"light rain shower\" || forecastText === \"moderate or heavy rain shower\" || forecastText === \"torrential rain shower\" || forecastText === \"light showers of ice pellets\" || forecastText === \"moderate or heavy showers of ice pellets\") {\n      return `url(${_img_rainyNight_jpg__WEBPACK_IMPORTED_MODULE_8__})`;\n    } else if (forecastText === \"patchy snow possible\" || forecastText === \"blowing snow\" || forecastText === \"blizzard\" || forecastText === \"patchy light snow\" || forecastText === \"light snow\" || forecastText === \"patchy moderate snow\" || forecastText === \"moderate snow\" || forecastText === \"patchy heavy snow\" || forecastText === \"heavy snow\" || forecastText === \"light snow showers\" || forecastText === \"moderate or heavy snow showers\") {\n      return `url(${_img_snowyNight_jpg__WEBPACK_IMPORTED_MODULE_6__})`;\n    } else if (forecastText === \"patchy sleet possible\" || forecastText === \"light sleet\" || forecastText === \"moderate or heavy sleet\" || forecastText === \"light sleet showers\" || forecastText === \"moderate or heavy sleet showers\") {\n      return `url(${_img_rainyNight_jpg__WEBPACK_IMPORTED_MODULE_8__})`;\n    } else if (forecastText === \"thundery outbreaks possible\") {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    } else if (forecastText === \"fog\" || forecastText === \"freezing fog\") {\n      return `url(${_img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;\n    } else if (forecastText === \"patchy light rain with thunder\" || forecastText === \"moderate or heavy rain with thunder\") {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    } else if (forecastText === \"patchy light snow with thunder\" || forecastText === \"moderate or heavy snow with thunder\") {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    }\n  }\n}\n\n//# sourceURL=webpack://template/./src/forecast/backgroundPicture.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   determineBackground: () => (/* binding */ determineBackground)\n/* harmony export */ });\n/* harmony import */ var _img_sunnyWeather_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/sunnyWeather.jpg */ \"./src/img/sunnyWeather.jpg\");\n/* harmony import */ var _img_rainyWeather_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/rainyWeather.jpg */ \"./src/img/rainyWeather.jpg\");\n/* harmony import */ var _img_cloudyNight_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/cloudyNight.jpg */ \"./src/img/cloudyNight.jpg\");\n/* harmony import */ var _img_cloudyWeather_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/cloudyWeather.jpg */ \"./src/img/cloudyWeather.jpg\");\n/* harmony import */ var _img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/mistyWeather.jpg */ \"./src/img/mistyWeather.jpg\");\n/* harmony import */ var _img_nightSky_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/nightSky.jpg */ \"./src/img/nightSky.jpg\");\n/* harmony import */ var _img_snowyNight_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/snowyNight.jpg */ \"./src/img/snowyNight.jpg\");\n/* harmony import */ var _img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/thunderWeather.jpg */ \"./src/img/thunderWeather.jpg\");\n/* harmony import */ var _img_rainyNight_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/rainyNight.jpg */ \"./src/img/rainyNight.jpg\");\n/* harmony import */ var _img_snowyWeather_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../img/snowyWeather.jpg */ \"./src/img/snowyWeather.jpg\");\n\n\n\n\n\n\n\n\n\n\nfunction determineBackground(forecastDay, forecastText) {\n  forecastText = forecastText.toLowerCase();\n  forecastText = forecastText.trim();\n  if (forecastDay == 1) {\n    if (forecastText === \"sunny\") {\n      return `url(${_img_sunnyWeather_jpg__WEBPACK_IMPORTED_MODULE_0__})`;\n    } else if (forecastText.includes(\"cloudy\") || forecastText === \"overcast\") {\n      return `url(${_img_cloudyWeather_jpg__WEBPACK_IMPORTED_MODULE_3__})`;\n    } else if (forecastText.includes(\"fog\") || forecastText === \"mist\") {\n      return `url(${_img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;\n    } else if (forecastText.includes(\"snow\") || forecastText === \"blizzard\") {\n      return `url(${_img_snowyWeather_jpg__WEBPACK_IMPORTED_MODULE_9__})`;\n    } else if (forecastText.includes(\"thunder\")) {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    } else {\n      return `url(${_img_rainyWeather_jpg__WEBPACK_IMPORTED_MODULE_1__})`;\n    }\n  } else {\n    if (forecastText === \"clear\") {\n      return `url(${_img_nightSky_jpg__WEBPACK_IMPORTED_MODULE_5__})`;\n    } else if (forecastText.includes(\"cloudy\") || forecastText === \"overcast\") {\n      return `url(${_img_cloudyNight_jpg__WEBPACK_IMPORTED_MODULE_2__})`;\n    } else if (forecastText.includes(\"fog\") || forecastText === \"mist\") {\n      return `url(${_img_mistyWeather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;\n    } else if (forecastText.includes(\"snow\") || forecastText === \"blizzard\") {\n      return `url(${_img_snowyNight_jpg__WEBPACK_IMPORTED_MODULE_6__})`;\n    } else if (forecastText.includes(\"thunder\")) {\n      return `url(${_img_thunderWeather_jpg__WEBPACK_IMPORTED_MODULE_7__})`;\n    } else {\n      return `url(${_img_rainyNight_jpg__WEBPACK_IMPORTED_MODULE_8__})`;\n    }\n  }\n}\n\n//# sourceURL=webpack://template/./src/forecast/backgroundPicture.js?");
 
 /***/ }),
 
@@ -246,7 +246,7 @@ eval("module.exports = __webpack_require__.p + \"22ae511e03fc2ed8d264.ttf\";\n\n
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"bab3b887a6f5638f763d.jpg\";\n\n//# sourceURL=webpack://template/./src/img/cloudyNight.jpg?");
+eval("module.exports = __webpack_require__.p + \"c5eef3d35eb82ca1d0f7.jpg\";\n\n//# sourceURL=webpack://template/./src/img/cloudyNight.jpg?");
 
 /***/ }),
 
@@ -256,7 +256,7 @@ eval("module.exports = __webpack_require__.p + \"bab3b887a6f5638f763d.jpg\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"815ed6091889597c082a.jpg\";\n\n//# sourceURL=webpack://template/./src/img/cloudyWeather.jpg?");
+eval("module.exports = __webpack_require__.p + \"a7bdd161c27ac012d7a0.jpg\";\n\n//# sourceURL=webpack://template/./src/img/cloudyWeather.jpg?");
 
 /***/ }),
 
@@ -456,7 +456,7 @@ eval("module.exports = __webpack_require__.p + \"6882b24cd31040ccc7b5.png\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"e8022f954bee644a6ca5.jpg\";\n\n//# sourceURL=webpack://template/./src/img/mistyWeather.jpg?");
+eval("module.exports = __webpack_require__.p + \"dd81032e6bf7b9621164.jpg\";\n\n//# sourceURL=webpack://template/./src/img/mistyWeather.jpg?");
 
 /***/ }),
 
@@ -466,7 +466,7 @@ eval("module.exports = __webpack_require__.p + \"e8022f954bee644a6ca5.jpg\";\n\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"90cce4bf802d56a469a2.jpg\";\n\n//# sourceURL=webpack://template/./src/img/nightSky.jpg?");
+eval("module.exports = __webpack_require__.p + \"d962952a9149ce2eeb95.jpg\";\n\n//# sourceURL=webpack://template/./src/img/nightSky.jpg?");
 
 /***/ }),
 
@@ -486,7 +486,7 @@ eval("module.exports = __webpack_require__.p + \"48c244a857719d2d2564.png\";\n\n
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"ec8691bfd928636aa106.jpg\";\n\n//# sourceURL=webpack://template/./src/img/rainyNight.jpg?");
+eval("module.exports = __webpack_require__.p + \"5c8679c745e24cda8880.jpg\";\n\n//# sourceURL=webpack://template/./src/img/rainyNight.jpg?");
 
 /***/ }),
 
@@ -496,7 +496,7 @@ eval("module.exports = __webpack_require__.p + \"ec8691bfd928636aa106.jpg\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"a3ff818a56fccb2c13b1.jpg\";\n\n//# sourceURL=webpack://template/./src/img/rainyWeather.jpg?");
+eval("module.exports = __webpack_require__.p + \"71083a62346a96e5001c.jpg\";\n\n//# sourceURL=webpack://template/./src/img/rainyWeather.jpg?");
 
 /***/ }),
 
@@ -516,7 +516,7 @@ eval("module.exports = __webpack_require__.p + \"c945641cabf962f3dbae.png\";\n\n
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"5964be3a9340ac200b83.jpg\";\n\n//# sourceURL=webpack://template/./src/img/snowyNight.jpg?");
+eval("module.exports = __webpack_require__.p + \"cde66320050b6b15a7d9.jpg\";\n\n//# sourceURL=webpack://template/./src/img/snowyNight.jpg?");
 
 /***/ }),
 
@@ -526,7 +526,7 @@ eval("module.exports = __webpack_require__.p + \"5964be3a9340ac200b83.jpg\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"e6dedbe4c26259eb4d40.jpg\";\n\n//# sourceURL=webpack://template/./src/img/snowyWeather.jpg?");
+eval("module.exports = __webpack_require__.p + \"2c6380d000cb0b3cef77.jpg\";\n\n//# sourceURL=webpack://template/./src/img/snowyWeather.jpg?");
 
 /***/ }),
 
@@ -536,7 +536,7 @@ eval("module.exports = __webpack_require__.p + \"e6dedbe4c26259eb4d40.jpg\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"6ca393d8ba00d2d7bcdf.jpg\";\n\n//# sourceURL=webpack://template/./src/img/sunnyWeather.jpg?");
+eval("module.exports = __webpack_require__.p + \"ae8d85b6a814a2444593.jpg\";\n\n//# sourceURL=webpack://template/./src/img/sunnyWeather.jpg?");
 
 /***/ }),
 
@@ -546,7 +546,7 @@ eval("module.exports = __webpack_require__.p + \"6ca393d8ba00d2d7bcdf.jpg\";\n\n
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"7f53f6e8c0efb8feda53.jpg\";\n\n//# sourceURL=webpack://template/./src/img/thunderWeather.jpg?");
+eval("module.exports = __webpack_require__.p + \"7fedd96895b26c8a3f79.jpg\";\n\n//# sourceURL=webpack://template/./src/img/thunderWeather.jpg?");
 
 /***/ }),
 
