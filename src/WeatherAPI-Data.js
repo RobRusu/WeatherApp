@@ -66,5 +66,7 @@ export async function getData(location) {
   weather.tomorrowMinC = Math.round(weather.tomorrowMinC);
   weather.tomorrowMinF = Math.round(weather.tomorrowMinF);
 
+  console.log(data);
+  console.log(weather);
   return weather;
 }
