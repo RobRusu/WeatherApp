@@ -1,5 +1,5 @@
 import clearNightSky from "../img/forecast/clearNightSky.png";
-import cloudyDay from "../img/forecast/cloudyDay.png";
+import cloudy from "../img/forecast/cloudyDay.png";
 import cloudyNight from "../img/forecast/cloudyNight.png";
 import fog from "../img/forecast/fog.png";
 import mist from "../img/forecast/mist.png";
@@ -26,69 +26,23 @@ export function determinePicture(forecastDay, forecastText) {
     } else if (forecastText === "partly cloudy") {
       return partlyCloudy;
     } else if (forecastText === "cloudy" || forecastText === "overcast") {
-      return cloudyDay;
+      return cloudy;
     } else if (forecastText === "mist") {
       return mist;
-    } else if (
-      forecastText === "patchy rain possible" ||
-      forecastText === "patchy freezing drizzle possible" ||
-      forecastText === "patchy light drizzle" ||
-      forecastText === "light drizzle" ||
-      forecastText === "freezing drizzle" ||
-      forecastText === "heavy freezing drizzle" ||
-      forecastText === "patchy light rain" ||
-      forecastText === "light rain" ||
-      forecastText === "moderate rain at times" ||
-      forecastText === "moderate rain" ||
-      forecastText === "heavy rain at times" ||
-      forecastText === "heavy rain" ||
-      forecastText === "light freezing rain" ||
-      forecastText === "moderate or heavy freezing rain" ||
-      forecastText === "ice pellets" ||
-      forecastText === "light rain shower" ||
-      forecastText === "moderate or heavy rain shower" ||
-      forecastText === "torrential rain shower" ||
-      forecastText === "light showers of ice pellets" ||
-      forecastText === "moderate or heavy showers of ice pellets" ||
-      forecastText === "patchy rain nearby"
-    ) {
-      return rain;
-    } else if (
-      forecastText === "patchy snow possible" ||
-      forecastText === "blowing snow" ||
-      forecastText === "blizzard" ||
-      forecastText === "patchy light snow" ||
-      forecastText === "light snow" ||
-      forecastText === "patchy moderate snow" ||
-      forecastText === "moderate snow" ||
-      forecastText === "patchy heavy snow" ||
-      forecastText === "heavy snow" ||
-      forecastText === "light snow showers" ||
-      forecastText === "moderate or heavy snow showers"
-    ) {
+    } else if (forecastText.includes("snow with thunder")) {
+      return thunderWithSnow;
+    } else if (forecastText.includes("snow") || forecastText === "blizzard") {
       return snow;
-    } else if (
-      forecastText === "patchy sleet possible" ||
-      forecastText === "light sleet" ||
-      forecastText === "moderate or heavy sleet" ||
-      forecastText === "light sleet showers" ||
-      forecastText === "moderate or heavy sleet showers"
-    ) {
+    } else if (forecastText.includes("sleet")) {
       return sleet;
     } else if (forecastText === "thundery outbreaks possible") {
       return thunder;
-    } else if (forecastText === "fog" || forecastText === "freezing fog") {
+    } else if (forecastText.includes("fog")) {
       return fog;
-    } else if (
-      forecastText === "patchy light rain with thunder" ||
-      forecastText === "moderate or heavy rain with thunder"
-    ) {
+    } else if (forecastText.includes("rain with thunder")) {
       return thunderWithRain;
-    } else if (
-      forecastText === "patchy light snow with thunder" ||
-      forecastText === "moderate or heavy snow with thunder"
-    ) {
-      return thunderWithSnow;
+    } else {
+      return rain;
     }
   } else {
     if (forecastText === "clear") {
@@ -96,69 +50,23 @@ export function determinePicture(forecastDay, forecastText) {
     } else if (forecastText === "partly cloudy") {
       return cloudyNight;
     } else if (forecastText === "cloudy" || forecastText === "overcast") {
-      return cloudyDay;
+      return cloudy;
     } else if (forecastText === "mist") {
       return mist;
-    } else if (
-      forecastText === "patchy rain possible" ||
-      forecastText === "patchy freezing drizzle possible" ||
-      forecastText === "patchy light drizzle" ||
-      forecastText === "light drizzle" ||
-      forecastText === "freezing drizzle" ||
-      forecastText === "heavy freezing drizzle" ||
-      forecastText === "patchy light rain" ||
-      forecastText === "light rain" ||
-      forecastText === "moderate rain at times" ||
-      forecastText === "moderate rain" ||
-      forecastText === "heavy rain at times" ||
-      forecastText === "heavy rain" ||
-      forecastText === "light freezing rain" ||
-      forecastText === "moderate or heavy freezing rain" ||
-      forecastText === "ice pellets" ||
-      forecastText === "light rain shower" ||
-      forecastText === "moderate or heavy rain shower" ||
-      forecastText === "torrential rain shower" ||
-      forecastText === "light showers of ice pellets" ||
-      forecastText === "moderate or heavy showers of ice pellets" ||
-      forecastText === "patchy rain nearby"
-    ) {
-      return rainyNight;
-    } else if (
-      forecastText === "patchy snow possible" ||
-      forecastText === "blowing snow" ||
-      forecastText === "blizzard" ||
-      forecastText === "patchy light snow" ||
-      forecastText === "light snow" ||
-      forecastText === "patchy moderate snow" ||
-      forecastText === "moderate snow" ||
-      forecastText === "patchy heavy snow" ||
-      forecastText === "heavy snow" ||
-      forecastText === "light snow showers" ||
-      forecastText === "moderate or heavy snow showers"
-    ) {
+    } else if (forecastText.includes("snow with thunder")) {
+      return thunderWithSnow;
+    } else if (forecastText.includes("snow") || forecastText === "blizzard") {
       return snowyNight;
-    } else if (
-      forecastText === "patchy sleet possible" ||
-      forecastText === "light sleet" ||
-      forecastText === "moderate or heavy sleet" ||
-      forecastText === "light sleet showers" ||
-      forecastText === "moderate or heavy sleet showers"
-    ) {
+    } else if (forecastText.includes("sleet")) {
       return sleetNight;
     } else if (forecastText === "thundery outbreaks possible") {
       return thunderAtNight;
-    } else if (forecastText === "fog" || forecastText === "freezing fog") {
+    } else if (forecastText.includes("fog")) {
       return fog;
-    } else if (
-      forecastText === "patchy light rain with thunder" ||
-      forecastText === "moderate or heavy rain with thunder"
-    ) {
+    } else if (forecastText.includes("rain with thunder")) {
       return thunderWithRain;
-    } else if (
-      forecastText === "patchy light snow with thunder" ||
-      forecastText === "moderate or heavy snow with thunder"
-    ) {
-      return thunderWithSnow;
+    } else {
+      return rainyNight;
     }
   }
 }
